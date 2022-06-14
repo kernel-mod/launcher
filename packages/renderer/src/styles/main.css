@@ -17,8 +17,6 @@ dialog {
 		15%
 	);
 
-    animation: bruh 5s infinite;
-
 	--kernel-foreground-primary: hsl(var(--kernel-base-hue), 0%, 100%);
 	--kernel-foreground-secondary: hsl(var(--kernel-base-hue), 75%, 87%);
 	--kernel-foreground-tertiary: hsl(var(--kernel-base-hue), 18%, 64%);

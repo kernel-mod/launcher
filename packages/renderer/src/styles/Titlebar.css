@@ -51,5 +51,5 @@
 
 .kernel-titlebar-button.close:hover,
 .kernel-titlebar-button.close:active {
-	background-color: var(--kernel-status-danger);
+	background-color: var(--kernel-foreground-danger);
 }

@@ -17,10 +17,10 @@ let win: BrowserWindow | null = null;
 
 async function createWindow() {
 	win = new BrowserWindow({
-		title: "Kernel Launcher",
-        frame: false,
+        title: "Kernel Launcher",
         width: 760,
         height: 560,
+        frame: false,
 		webPreferences: {
 			preload: join(__dirname, "../preload/index.cjs")
 		}
@@ -32,7 +32,9 @@ async function createWindow() {
 		const url = `http://${process.env["VITE_DEV_SERVER_HOST"]}:${process.env["VITE_DEV_SERVER_PORT"]}`;
 
 		win.loadURL(url);
-		win.webContents.openDevTools();
+		win.webContents.openDevTools({
+            mode: "detach"
+        });
 	}
 
 	// Make all links open with the browser, not with the application
