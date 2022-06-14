@@ -26,6 +26,7 @@ export default function Titlebar(props: Props) {
 			<span class="kernel-titlebar-wordmark">{merged.title}</span>
 			<div class="kernel-titlebar-controls">
 				<button
+                    title="Minimize"
 					class="kernel-titlebar-button minimize"
 					aria-label="Minimize Window"
 					onClick={merged.onMinimize}
@@ -34,16 +35,16 @@ export default function Titlebar(props: Props) {
 				</button>
 				<Show when={merged.resizable}>
 					<button
+                        title="Maximize"
 						class="kernel-titlebar-button maximize"
-						aria-label="Maximize Window"
 						onClick={merged.onMaximize}
 					>
 						o
 					</button>
 				</Show>
 				<button
+                    title="Close"
 					class="kernel-titlebar-button close"
-					aria-label="Close Window"
 					onClick={merged.onClose}
 				>
 					<CloseIcon />

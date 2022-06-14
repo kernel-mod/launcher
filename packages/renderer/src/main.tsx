@@ -23,7 +23,7 @@ function App() {
 
 	return (
 		<main class="kernel-app-window">
-			<Titlebar title="Kernel" resizable={false} />
+			<Titlebar title="Kernel" />
 			<nav class="kernel-navigation-bar">
 				<TabBar value={page()} items={data.pages} onChange={setPage} />
 			</nav>
