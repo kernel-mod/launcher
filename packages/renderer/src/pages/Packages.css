@@ -1,0 +1,19 @@
+.kernel-packages {
+	margin-block-start: 12px;
+	column-count: 2;
+	column-gap: 12px;
+}
+
+.kernel-packages > * {
+	break-inside: avoid-column;
+	margin-block-end: 12px;
+}
+
+.kernel-packages-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.kernel-packages-header .kernel-search-bar {
+	max-inline-size: 160px;
+}

@@ -1,0 +1,97 @@
+.kernel-search-bar {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	inline-size: 100%;
+	block-size: 28px;
+	background-color: var(--kernel-background-primary);
+	border-radius: 4px;
+}
+
+.kernel-search-bar-input {
+	flex: 1 1 auto;
+	padding-inline: 12px;
+	min-inline-size: 0;
+	block-size: 100%;
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 500;
+	background-color: transparent;
+	color: var(--kernel-foreground-secondary);
+	border: none;
+	outline: none;
+}
+
+.kernel-search-bar-input::-webkit-search-decoration,
+.kernel-search-bar-input::-webkit-search-cancel-button,
+.kernel-search-bar-input::-webkit-search-results-button,
+.kernel-search-bar-input::-webkit-search-results-decoration {
+	appearance: none;
+}
+
+.kernel-search-bar-input::placeholder {
+	transition: 250ms ease;
+	color: var(--kernel-foreground-tertiary);
+}
+
+.kernel-search-bar-input:focus::placeholder {
+	opacity: 0.6;
+}
+
+.kernel-search-bar-button {
+	--kernel-search-bar-button-color: var(--kernel-interactive-primary);
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	padding-inline: 0 4px;
+	inline-size: 36px;
+	block-size: 100%;
+	border: none;
+	background-color: var(--kernel-search-bar-button-color);
+	color: var(--kernel-accent-primary);
+	transition: 150ms ease;
+}
+
+.kernel-search-bar-button:disabled {
+	cursor: default;
+}
+
+.kernel-search-bar-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -4px;
+	width: 0;
+	height: 0;
+	border-block-start: 28px solid transparent;
+	border-inline-end: 4px solid var(--kernel-search-bar-button-color);
+	transition: inherit;
+}
+
+.kernel-search-bar-button:not(:disabled):hover {
+	--kernel-search-bar-button-color: var(--kernel-interactive-secondary);
+}
+
+.kernel-search-bar-button:not(:disabled) .kernel-search-bar-clear-icon,
+.kernel-search-bar-button:disabled .kernel-search-bar-search-icon {
+	transform: rotate(0);
+	opacity: 1;
+}
+
+.kernel-search-bar-button svg {
+	position: absolute;
+	opacity: 0;
+	inline-size: 12px;
+	block-size: 12px;
+	fill: currentColor;
+	transition: transform 250ms ease;
+	transform: rotate(90deg);
+}
+
+.kernel-search-bar-button:active svg {
+	transform: scale(0.8);
+}

@@ -1,0 +1,8 @@
+.kernel-settings-group:not(:last-of-type) {
+	margin-bottom: 36px;
+}
+
+.kernel-settings-group-title {
+	margin-block-end: 4px;
+	background-color: var(--kernel-background-secondary);
+}

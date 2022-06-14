@@ -1,0 +1,48 @@
+.kernel-tab-bar {
+	position: relative;
+	display: flex;
+	align-items: center;
+	block-size: 48px;
+}
+
+.kernel-tab {
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	block-size: 100%;
+	padding: 0 24px;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 600;
+	transition: 150ms ease;
+	background-color: transparent;
+	border: none;
+	color: var(--kernel-foreground-tertiary);
+}
+
+.kernel-tab-indicator {
+	z-index: -1;
+	box-sizing: border-box;
+	position: absolute;
+	inset: 0;
+	inset-inline-start: var(--kernel-tab-offset);
+	inline-size: var(--kernel-tab-size);
+	border-block-end: 3px solid var(--kernel-accent-primary);
+	transform-origin: left;
+	transition: 250ms ease;
+}
+
+.kernel-tab.selected {
+	cursor: default;
+	color: var(--kernel-foreground-primary);
+}
+
+.kernel-tab svg {
+	inline-size: 16px;
+	block-size: 16px;
+	margin-right: 8px;
+	fill: var(--kernel-accent-primary);
+}

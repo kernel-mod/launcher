@@ -1,11 +1,35 @@
 {
-	"main": "src/index.js",
-	"type": "module",
-	"scripts": {
-		"start": "node src/index.js"
-	},
-	"dependencies": {
-		"ws": "^8.8.0"
-	},
-	"license": "MIT"
+  "name": "kernel-launcher",
+  "description": "An experimental launcher for Kernel that injects without modifying the filesystem.",
+  "author": "kernel-mod",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kernel-mod/launcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kernel-mod/launcher/issues"
+  },
+  "homepage": "https://github.com/kernel-mod/launcher#readme",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "dev": "node scripts/watch.mjs",
+    "build": "node scripts/build.mjs && electron-builder --config .electron-builder.config.js",
+    "check": "tsc --noEmit --project packages/renderer/tsconfig.json",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "ws": "^8.8.0"
+  },
+  "devDependencies": {
+    "electron": "^17.4.7",
+    "electron-builder": "^22.14.13",
+    "prettier": "^2.6.2",
+    "solid-app-router": "^0.3.3",
+    "solid-js": "^1.4.4",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12",
+    "vite-plugin-solid": "^2.2.6"
+  }
 }

@@ -1,0 +1,55 @@
+.kernel-titlebar {
+	-webkit-app-region: drag;
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	block-size: 32px;
+	padding-inline-start: 12px;
+	font-weight: 600;
+	color: var(--kernel-foreground-secondary);
+	background: var(--kernel-background-tertiary);
+	justify-content: space-between;
+}
+
+.kernel-titlebar-controls {
+	display: flex;
+	align-items: center;
+	block-size: 100%;
+}
+
+.kernel-titlebar-button {
+    -webkit-app-region: no-drag;
+	padding: 0;
+	block-size: 100%;
+	inline-size: 45px;
+	background-color: transparent;
+	color: var(--kernel-foreground-primary);
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.kernel-titlebar-button:hover {
+	background-color: var(--kernel-interactive-primary);
+}
+
+.kernel-titlebar-button:active {
+	background-color: var(--kernel-interactive-secondary);
+}
+
+.kernel-titlebar-button:active svg {
+	opacity: 0.6;
+}
+
+.kernel-titlebar-button svg {
+	inline-size: 12px;
+	block-size: 12px;
+	fill: currentColor;
+}
+
+.kernel-titlebar-button.close:hover,
+.kernel-titlebar-button.close:active {
+	background-color: var(--kernel-status-danger);
+}

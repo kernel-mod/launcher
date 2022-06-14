@@ -1,0 +1,19 @@
+.kernel-settings-item {
+	padding-block: 16px;
+	border-block-end: thin solid var(--kernel-interactive-primary);
+}
+
+.kernel-settings-item-header {
+	margin-block-end: 12px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.kernel-settings-item-title {
+	flex: 1 1 auto;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1;
+	color: var(--kernel-accent-primary);
+}

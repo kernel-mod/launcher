@@ -1,0 +1,82 @@
+.kernel-package {
+	box-sizing: border-box;
+	inline-size: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	border: 2px solid transparent;
+	background-color: var(--kernel-background-primary);
+	transition: 150ms ease;
+}
+
+.kernel-package.enabled {
+	border-color: var(--kernel-accent-primary);
+	box-shadow: 0 2px 4px var(--kernel-accent-faded);
+}
+
+.kernel-package-header {
+	margin-block-end: 12px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.kernel-package-name {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1;
+	color: var(--kernel-accent-primary);
+}
+
+.kernel-package-authors {
+	font-size: 12px;
+	color: var(--kernel-foreground-tertiary);
+}
+
+.kernel-package-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-block-start: 8px;
+}
+
+.kernel-package-button {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-family: inherit;
+	gap: 4px;
+	min-block-size: 20px;
+	padding-inline: 8px;
+	padding-block: 2px;
+	border-radius: 50px;
+	font-size: 12px;
+	font-weight: 600;
+	border: none;
+	background-color: var(--kernel-interactive-primary);
+	color: var(--kernel-foreground-secondary);
+	transition: 150ms ease;
+}
+
+.kernel-package-button.danger {
+	color: var(--kernel-foreground-danger);
+}
+
+.kernel-package-button:hover {
+	background-color: var(--kernel-interactive-secondary);
+}
+
+.kernel-package-button:active {
+	background-color: var(--kernel-interactive-tertiary);
+}
+
+.kernel-package-button.danger:active {
+	background-color: var(--kernel-foreground-danger);
+	color: var(--kernel-background-primary);
+}
+
+.kernel-package-button > svg {
+	inline-size: 12px;
+	block-size: 12px;
+	fill: currentColor;
+}

@@ -1,0 +1,14 @@
+.kernel-title {
+	color: var(--kernel-foreground-primary);
+	line-height: normal;
+	margin: 0;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.kernel-caption {
+	color: var(--kernel-foreground-secondary);
+	line-height: 1.6;
+	font-size: 12px;
+	font-weight: 500;
+}

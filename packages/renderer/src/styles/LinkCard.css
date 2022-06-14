@@ -1,0 +1,51 @@
+.kernel-link-card {
+	display: flex;
+	align-items: center;
+	padding: 6px;
+	border-radius: 4px;
+	border: 2px solid transparent;
+	background-color: var(--kernel-background-primary);
+	text-decoration: none;
+	transition: 150ms ease;
+}
+
+.kernel-link-card:hover .kernel-link-card-icon {
+	background-color: var(--kernel-interactive-secondary);
+}
+
+.kernel-link-card:active {
+	background-color: var(--kernel-interactive-primary);
+}
+
+.kernel-link-card:active .kernel-link-card-icon {
+	background-color: var(--kernel-background-primary);
+}
+
+.kernel-link-card-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	margin-right: 12px;
+	width: 36px;
+	height: 36px;
+	background-color: var(--kernel-interactive-primary);
+	color: var(--kernel-accent-primary);
+	transition: 150ms ease;
+}
+
+.kernel-link-card-icon svg {
+	fill: currentColor;
+	width: 14px;
+	height: 14px;
+}
+
+.kernel-link-card-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--kernel-foreground-secondary);
+}
+
+.kernel-link-card-description {
+	color: var(--kernel-foreground-tertiary);
+}
