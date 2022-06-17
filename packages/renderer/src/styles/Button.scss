@@ -31,8 +31,16 @@
 	background-color: var(--kernel-interactive-secondary);
 }
 
+.kernel-button.variant-danger,
+.kernel-button.variant-accent {
+    font-weight: 700;
+    color: var(--kernel-background-tertiary);
+}
+
 .kernel-button.variant-danger {
-	font-weight: 700;
 	background-color: var(--kernel-background-danger);
-	color: var(--kernel-background-tertiary);
+}
+
+.kernel-button.variant-accent {
+    background-color: var(--kernel-accent-primary);
 }
