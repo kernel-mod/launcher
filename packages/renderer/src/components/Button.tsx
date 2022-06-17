@@ -1,7 +1,7 @@
 import { mergeProps, splitProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
 
-import "../styles/Button.css";
+import "../styles/Button.scss";
 
 const defaultProps = {
 	variant: "default",

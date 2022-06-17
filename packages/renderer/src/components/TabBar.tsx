@@ -1,6 +1,6 @@
 import { createSignal, createEffect, mergeProps, For } from "solid-js";
 
-import "../styles/TabBar.css";
+import "../styles/TabBar.scss";
 
 interface TabItem {
 	name: string;

@@ -1,6 +1,6 @@
 import { createSignal, mergeProps } from "solid-js";
 
-import "../styles/Switch.css";
+import "../styles/Switch.scss";
 
 interface Props {
 	checked?: boolean;

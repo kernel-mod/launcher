@@ -1,9 +1,5 @@
-import { app, BrowserWindow, shell } from "electron";
-import { release } from "os";
+import { app, BrowserWindow, ipcMain, shell } from "electron";
 import { join } from "path";
-
-// Disable GPU Acceleration for Windows 7
-if (release().startsWith("6.1")) app.disableHardwareAcceleration();
 
 // Set application name for Windows 10+ notifications
 if (process.platform === "win32") app.setAppUserModelId(app.getName());
@@ -18,13 +14,18 @@ let win: BrowserWindow | null = null;
 async function createWindow() {
 	win = new BrowserWindow({
         title: "Kernel Launcher",
-        width: 760,
-        height: 560,
+        width: 700,
+        height: 500,
         frame: false,
+        show: false,
 		webPreferences: {
 			preload: join(__dirname, "../preload/index.cjs")
 		}
 	});
+
+    win.on('ready-to-show', () => {
+        win?.show();
+    });
 
 	if (app.isPackaged) {
 		win.loadFile(join(__dirname, "../renderer/index.html"));
@@ -37,14 +38,20 @@ async function createWindow() {
         });
 	}
 
-	// Make all links open with the browser, not with the application
+	// Open URLS with the shell rather than new windows
 	win.webContents.setWindowOpenHandler(({ url }) => {
 		if (url.startsWith("https:")) shell.openExternal(url);
 		return { action: "deny" };
 	});
+
+    // KernelNative contextBridge handlers
+    ipcMain.handle("close", () => win?.close());
+    ipcMain.handle("minimize", () => win?.minimize());
+    ipcMain.handle("maximize", () => win?.maximize());
+    ipcMain.handle("restore", () => win?.restore());
 }
 
-app.whenReady().then(createWindow);
+app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {
 	win = null;
@@ -61,6 +68,7 @@ app.on("second-instance", () => {
 
 app.on("activate", () => {
 	const allWindows = BrowserWindow.getAllWindows();
+    
 	if (allWindows.length) {
 		allWindows[0].focus();
 	} else {

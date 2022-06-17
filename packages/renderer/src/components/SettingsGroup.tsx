@@ -2,7 +2,7 @@ import { Show, createSignal, mergeProps } from "solid-js";
 
 import Text from "./Text";
 
-import "../styles/SettingsGroup.css";
+import "../styles/SettingsGroup.scss";
 
 interface Props {
 	title?: string;

@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Packages from "./pages/Packages";
 import Settings from "./pages/Settings";
 
-import "./styles/main.css";
+import "./styles/main.scss";
 
 const PAGES = {
 	home: <Home />,
@@ -23,7 +23,12 @@ function App() {
 
 	return (
 		<main class="kernel-app-window">
-			<Titlebar title="Kernel" />
+			<Titlebar
+                title="Kernel"
+                onClose={KernelNative.window.close}
+                onMinimize={KernelNative.window.minimize}
+                onMaximize={KernelNative.window.maximize}
+            />
 			<nav class="kernel-navigation-bar">
 				<TabBar value={page()} items={data.pages} onChange={setPage} />
 			</nav>

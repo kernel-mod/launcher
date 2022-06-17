@@ -6,7 +6,7 @@ import Text from "./Text";
 import TrashIcon from "../icons/Trash";
 import SettingsIcon from "../icons/Settings";
 
-import "../styles/Package.css";
+import "../styles/Package.scss";
 
 interface Props {
 	name: string;

@@ -1,7 +1,7 @@
 import { Dynamic } from "solid-js/web";
 import { mergeProps, splitProps } from "solid-js";
 
-import "../styles/Text.css";
+import "../styles/Text.scss";
 
 interface Props {
 	variant?: "caption" | "title";

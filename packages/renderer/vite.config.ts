@@ -12,9 +12,8 @@ export default defineConfig({
 	],
 	base: "./",
 	build: {
-		target: "esnext",
-		polyfillDynamicImport: false,
-		emptyOutDir: true,
-		outDir: "../../dist/renderer"
+        target: "esnext",
+		outDir: "../../dist/renderer",
+		emptyOutDir: true
 	}
 });

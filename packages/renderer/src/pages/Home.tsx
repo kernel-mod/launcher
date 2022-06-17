@@ -8,13 +8,11 @@ import Book from "../icons/Book";
 import GitHub from "../icons/GitHub";
 import Comment from "../icons/Comment";
 
-import "./Home.css";
+import "./Home.scss";
 
 const [open, setOpen] = createSignal(false);
 
 export default function Home(props) {
-	createEffect(() => console.log(open()));
-
 	return (
 		<>
 			<div class="kernel-home-links">
