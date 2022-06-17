@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Packages from "./pages/Packages";
 import Settings from "./pages/Settings";
 
-import "./styles/main.scss";
+import "./styles/main.css";
 
 const PAGES = {
 	home: <Home />,

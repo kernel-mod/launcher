@@ -8,7 +8,7 @@ import {
 
 import Text from "./Text";
 
-import "../styles/Dialog.scss";
+import "../styles/Dialog.css";
 
 interface Props {
 	open?: boolean;

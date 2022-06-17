@@ -3,7 +3,7 @@ import { Show, createSignal, mergeProps } from "solid-js";
 import Switch from "./Switch";
 import Text from "./Text";
 
-import "../styles/SettingsItem.scss";
+import "../styles/SettingsItem.css";
 
 interface Props {
 	title: string;

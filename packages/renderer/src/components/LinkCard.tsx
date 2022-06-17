@@ -2,7 +2,7 @@ import { Show, mergeProps, splitProps } from "solid-js";
 
 import Text from "./Text";
 
-import "../styles/LinkCard.scss";
+import "../styles/LinkCard.css";
 
 const defaultProps = {
 	title: "",

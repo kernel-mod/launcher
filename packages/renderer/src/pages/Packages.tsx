@@ -1,6 +1,6 @@
 import { For, createSignal } from "solid-js";
 
-import "./Packages.scss";
+import "./Packages.css";
 
 import Package from "../components/Package";
 import Button from "../components/Button";

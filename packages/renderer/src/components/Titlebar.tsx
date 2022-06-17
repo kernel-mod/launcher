@@ -3,7 +3,7 @@ import { Show, mergeProps } from "solid-js";
 import CloseIcon from "../icons/Close";
 import MinimizeIcon from "../icons/Minimize";
 
-import "../styles/Titlebar.scss";
+import "../styles/Titlebar.css";
 
 interface Props {
 	title: string;

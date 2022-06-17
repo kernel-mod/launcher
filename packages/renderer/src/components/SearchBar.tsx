@@ -3,7 +3,7 @@ import { createSignal, splitProps, mergeProps } from "solid-js";
 import SearchIcon from "../icons/Search";
 import CloseIcon from "../icons/Close";
 
-import "../styles/SearchBar.scss";
+import "../styles/SearchBar.css";
 
 interface Props {
 	value: string;

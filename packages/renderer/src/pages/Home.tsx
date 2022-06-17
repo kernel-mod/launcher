@@ -8,7 +8,7 @@ import Book from "../icons/Book";
 import GitHub from "../icons/GitHub";
 import Comment from "../icons/Comment";
 
-import "./Home.scss";
+import "./Home.css";
 
 const [open, setOpen] = createSignal(false);
 
